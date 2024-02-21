@@ -9,17 +9,21 @@ export default function progressionTheLogicOfTheGame() {
 
   for (let i = 0; i < 3; i += 1) {
     const progLength = random(5, 10);
-    const progPass = random(0, 10);
-    let item = random(0, 10);
+    const progPass = random(1, 10);
+    let item = random(0, 9);
     const index = random(0, progLength - 1);
     const progression = [];
+
     for (let u = 0; u < progLength; u += 1) {
       progression.push(item);
       item += progPass;
     }
+
     const rightAnswer = progression[index];
     progression[index] = '..';
-    console.log(`Question: ${progression}`);
+    const progExample = progression.join(' ');
+
+    console.log(`Question: ${progExample}`);
     const request = readlineSync.question('Your answer: ');
     const resultRequest = Number(request);
     if (resultRequest === rightAnswer) {
@@ -33,4 +37,5 @@ export default function progressionTheLogicOfTheGame() {
   } if (countCorrectAnswer === 3) {
     console.log(`Congratulations, ${userName}!`);
   }
+
 }
