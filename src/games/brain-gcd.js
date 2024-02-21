@@ -22,7 +22,7 @@ export default function gcdTheLogicOfTheGame() {
       console.log('Correct!');
       countCorrectAnswer += 1;
     } else if (resultRequest !== check) {
-      console.log(`'${request}' is wrong answer ;(. Correct answer was '${check}')`);
+      console.log(`'${request}' is wrong answer ;(. Correct answer was '${check}'.`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }

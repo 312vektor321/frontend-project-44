@@ -24,7 +24,7 @@ export default function primeTheLogicOfTheGame() {
       console.log('Correct!');
       countCorrectAnswer += 1;
     } else if (resultRequest !== simpleNum) {
-      console.log(`"${request}" is wrong answer ;(. Correct answer was "${simpleNum}")`);
+      console.log(`'${request}' is wrong answer ;(. Correct answer was '${simpleNum}'.`);
       console.log(`Let's try again, ${userName}!`);
 
       break;

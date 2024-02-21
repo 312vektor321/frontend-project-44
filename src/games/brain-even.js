@@ -15,7 +15,7 @@ export default function evenFirstStepGames() {
 
     if (questionOne !== 'yes' && questionOne !== 'no') {
       console.log('Is wrong answer');
-      console.log(`Let's try again, ${userName}.`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     } else if (randomNumberOne % 2 === 0) {
       if (questionOne === 'yes') {
@@ -32,7 +32,7 @@ export default function evenFirstStepGames() {
         countCorrectAnswer.push('Correct');
       } else if (questionOne === 'yes') {
         console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-        console.log(`Let's try again, ${userName}.`);
+        console.log(`Let's try again, ${userName}!`);
         break;
       }
     }
