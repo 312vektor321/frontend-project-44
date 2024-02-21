@@ -36,7 +36,7 @@ function calcFirstStepGames() {
       countCorrectAnswer.push('Correct');
     } else if (resultRequest !== result) {
       console.log(`${request} is wrong answer ;(. Correct answer was ${check})`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
   } if (countCorrectAnswer.length === 3) {

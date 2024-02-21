@@ -23,7 +23,7 @@ export default function evenFirstStepGames() {
         countCorrectAnswer.push('Correct');
       } else if (questionOne === 'no') {
         console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-        console.log(`Let's try again, ${userName}.`);
+        console.log(`Let's try again, ${userName}!`);
         break;
       }
     } else if (randomNumberOne % 2 !== 0) {

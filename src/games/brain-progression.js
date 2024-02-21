@@ -27,7 +27,7 @@ export default function progressionTheLogicOfTheGame() {
       console.log('Correct!');
     } else if (resultRequest !== rightAnswer) {
       console.log(`${request} is wrong answer ;(. Correct answer was ${rightAnswer})`);
-      console.log(`Let's try again, ${userName}`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
   } if (countCorrectAnswer === 3) {
