@@ -37,5 +37,4 @@ export default function progressionTheLogicOfTheGame() {
   } if (countCorrectAnswer === 3) {
     console.log(`Congratulations, ${userName}!`);
   }
-
 }
