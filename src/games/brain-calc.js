@@ -1,20 +1,20 @@
 import readlineSync from 'readline-sync';
-import { welcome } from '../index.js';
+import { welcome, isWrongAnswer, random, questions, congratulations } from '../index.js';
 
 function calcFirstStepGames() {
   const question = 'What is the result of the expression?';
   const userName = welcome(question);
-  const countCorrectAnswer = [];
+  let countCorrectAnswer = 0;
   for (let i = 0; i < 3; i += 1) {
-    const randomNumberOne = Math.floor(Math.random() * 100);
-    const randomNumberTwo = Math.floor(Math.random() * 100);
+    const randomNumberOne = random(0, 100)
+    const randomNumberTwo = random(0, 100)
 
     const sings = ['+', '-', '*'];
-    const znak = Math.floor(Math.random() * 3);
+    const znak = random(0, 2)
     const action = sings[znak];
     const resultExpression = `${randomNumberOne} ${action} ${randomNumberTwo}`;
 
-    console.log(`Question: ${resultExpression} `);
+    questions(resultExpression)
     const request = readlineSync.question('Your answer: ');
     const resultRequest = Number(request);
     let check = randomNumberOne + action + randomNumberTwo;
@@ -32,15 +32,14 @@ function calcFirstStepGames() {
         check = randomNumberOne * randomNumberTwo;
         result = check;
     } if (resultRequest === result) {
-      console.log('Correct!');
-      countCorrectAnswer.push('Correct');
+      isWrongAnswer(resultRequest, check, userName)
+      countCorrectAnswer += 1;
     } else if (resultRequest !== result) {
-      console.log(`'${request}' is wrong answer ;(. Correct answer was '${check}'.`);
-      console.log(`Let's try again, ${userName}!`);
+      isWrongAnswer(request, check, userName);
       break;
     }
-  } if (countCorrectAnswer.length === 3) {
-    console.log(`Congratulations, ${userName}!`);
+  } if (countCorrectAnswer === 3) {
+    congratulations(userName);
   }
 }
 

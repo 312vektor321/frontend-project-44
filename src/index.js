@@ -9,3 +9,22 @@ export const welcome = (question) => {
   console.log(question);
   return userName;
 };
+
+export const isWrongAnswer = (answerUser, correctAnswer, name) => {
+  if (answerUser === correctAnswer) {
+    console.log('Correct!')
+  } else {
+    console.log(`'${answerUser}'  is wrong answer ;(. Correct answer was '${correctAnswer}'`)
+    console.log(`Let's try again, ${name} !`)
+  }
+};
+
+export const congratulations = (name) => {
+
+  console.log(`Congratulations, ${name}!`)
+};
+
+export const questions = (question) => {
+  console.log(`Question: ${question}`)
+}
+
