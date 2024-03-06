@@ -15,7 +15,7 @@ export const isWrongAnswer = (answerUser, correctAnswer, name) => {
     console.log('Correct!');
   } else {
     console.log(`'${answerUser}'  is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-    console.log(`Let's try again, ${name} !`);
+    console.log(`Let's try again, ${name}!`);
   }
 };
 
