@@ -12,19 +12,17 @@ export const welcome = (question) => {
 
 export const isWrongAnswer = (answerUser, correctAnswer, name) => {
   if (answerUser === correctAnswer) {
-    console.log('Correct!')
+    console.log('Correct!');
   } else {
-    console.log(`'${answerUser}'  is wrong answer ;(. Correct answer was '${correctAnswer}'`)
-    console.log(`Let's try again, ${name} !`)
+    console.log(`'${answerUser}'  is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+    console.log(`Let's try again, ${name} !`);
   }
 };
 
 export const congratulations = (name) => {
-
-  console.log(`Congratulations, ${name}!`)
+  console.log(`Congratulations, ${name}!`);
 };
 
 export const questions = (question) => {
-  console.log(`Question: ${question}`)
-}
-
+  console.log(`Question: ${question}`);
+};
